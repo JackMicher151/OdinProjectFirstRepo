@@ -8,6 +8,29 @@ h1 {
     width: 50%;
 }
 
+.slidein {
+    width: 100%;
+    margin-left: 100vw;
+    animation: slideinanim;
+    animation-duration: 150ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.slidein:nth-child(2) {animation-delay: 150ms;}
+.slidein:nth-child(3) {animation-delay: 300ms;}
+.slidein:nth-child(4) {animation-delay: 450ms;}
+.slidein:nth-child(5) {animation-delay: 600ms;}
+
+.fadein {
+    animation: fadeinanim;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 #secretlink {
     display: block;
     position: absolute;
@@ -24,12 +47,11 @@ h1 {
 }
 
 #redtoblueanim {
-    position:relative;
-    animation:redtoblue;
-    animation-duration:2s;
-    animation-iteration-count:infinite;
-    width:50%;
-    height:20%;
+    animation: redtoblue;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    width: 50%;
+    height: 20%;
     margin: auto;
 }
 
@@ -37,4 +59,14 @@ h1 {
     0% {background-color: rgb(194, 48, 48);}
     50% {background-color: rgb(26, 159, 204);}
     100% {background-color: rgb(194, 48, 48);}
+}
+
+@keyframes slideinanim {
+    0% {margin-left: 100vw;}
+    100% {margin-left: 0vw;}
+}
+
+@keyframes fadeinanim {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
 }
